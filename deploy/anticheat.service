@@ -1,0 +1,15 @@
+[Unit]
+Description=Anticheat local daemon
+After=network.target
+
+[Service]
+Type=simple
+User=anticheat
+ExecStart=/usr/local/bin/anticheat daemon --port 12777 --token ${ANTICHEAT_TOKEN}
+EnvironmentFile=/etc/anticheat/token
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

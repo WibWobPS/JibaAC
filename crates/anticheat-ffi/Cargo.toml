@@ -1,0 +1,16 @@
+[package]
+name = "anticheat-ffi"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+anticheat-model = { path = "../anticheat-model" }
+anticheat-core = { path = "../anticheat-core" }
+anticheat-rules = { path = "../anticheat-rules" }
+anticheat-storage = { path = "../anticheat-storage" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }

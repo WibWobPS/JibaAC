@@ -1,0 +1,18 @@
+[package]
+name = "anticheat-rules"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anticheat-model = { path = "../anticheat-model" }
+anticheat-core = { path = "../anticheat-core" }
+anticheat-storage = { path = "../anticheat-storage" }
+anticheat-protocol = { path = "../anticheat-protocol" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }

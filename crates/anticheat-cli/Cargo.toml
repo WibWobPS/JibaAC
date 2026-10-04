@@ -1,0 +1,22 @@
+[package]
+name = "anticheat-cli"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "anticheat"
+path = "src/main.rs"
+
+[dependencies]
+anticheat-model = { path = "../anticheat-model" }
+anticheat-core = { path = "../anticheat-core" }
+anticheat-rules = { path = "../anticheat-rules" }
+anticheat-storage = { path = "../anticheat-storage" }
+anticheat-protocol = { path = "../anticheat-protocol" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+axum = { workspace = true }
+tracing = { workspace = true }
+chrono = { workspace = true }
+thiserror = { workspace = true }

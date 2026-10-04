@@ -1,0 +1,48 @@
+{
+  "enabled": true,
+  "mode": "SHADOW",
+  "default_deny": true,
+  "risk_decay_per_minute": 1.5,
+  "thresholds": {
+    "suspicious": 20,
+    "high_risk": 40,
+    "critical": 60,
+    "confirmed": 80
+  },
+  "rules": {
+    "replay_detection": true,
+    "impossible_progression": true,
+    "economy": true,
+    "inventory": true,
+    "stage_machine": true,
+    "reward_provenance": true,
+    "gacha_authority": true,
+    "time_validation": true,
+    "session_binding": true,
+    "rate_limit": true,
+    "bot_detection": true,
+    "ownership": true,
+    "admin_guard": true,
+    "request_shape": true
+  },
+  "rate_limit": {
+    "per_account": { "capacity": 120.0, "refill_per_sec": 20.0 },
+    "per_session": { "capacity": 90.0, "refill_per_sec": 15.0 },
+    "per_endpoint": { "capacity": 40.0, "refill_per_sec": 8.0 },
+    "per_ip": { "capacity": 300.0, "refill_per_sec": 50.0 },
+    "per_operation": {
+      "login": { "capacity": 10.0, "refill_per_sec": 1.0 },
+      "gacha": { "capacity": 8.0, "refill_per_sec": 0.5 },
+      "reward_claim": { "capacity": 12.0, "refill_per_sec": 1.0 },
+      "stage_end": { "capacity": 15.0, "refill_per_sec": 1.5 }
+    },
+    "global_per_sec": 2000.0
+  },
+  "clock_skew_ms": 5000,
+  "max_future_ms": 30000,
+  "max_past_ms": 300000,
+  "replay_window_ms": 3600000,
+  "min_stage_ms": 15000,
+  "max_score_per_second": 1000000,
+  "trusted_proxies": []
+}
